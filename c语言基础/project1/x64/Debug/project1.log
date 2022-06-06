@@ -1,0 +1,4 @@
+﻿  text.cpp
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+text.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+  project1.vcxproj -> D:\vs\code\project1\x64\Debug\project1.exe
