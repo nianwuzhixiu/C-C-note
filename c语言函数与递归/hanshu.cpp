@@ -31,7 +31,7 @@
 //statement;		语句
 //}
 // ret_type 返回值类型；fun_name 函数名；paral 函数参数；
-
+//
 //void Swap(int* pa, int* pb)
 //{
 //	int tmp = 0;
@@ -129,7 +129,7 @@
 //	return 0;
 //}
 
-#include "Add.h"
+//#include "Add.h"
 //函数声明
 //int main()
 //{
@@ -178,25 +178,87 @@
 //	}
 //	return count;
 //}
-int my_strlen(char* str) //用递归
+//int my_strlen(char* str) //用递归
+//{
+//	if (*str != '\0')
+//		return 1 + my_strlen(str + 1);
+//	else
+//		return 0;
+////my_strlen("bit")
+////1+my_strlen("bi")
+////1+1+my_strlen("b")
+////1+1+1+my_strlen("")
+////1+1+1+0
+////0
+//}
+//void main()  //求字符串长度
+//{
+//	char arr[] = "hello";
+//	//int len = strlen(arr);//求字符串长度
+//	//printf("%d\n", len);
+//	int len = my_strlen(arr);
+//	//arr是数组，数组传参，传过去的不是整个数组，而是第一个元素的地址；
+//	printf("%d\n", len);
+//}
+
+
+//int Fac1(int n)//非递归
+//{
+//	int i = 0;
+//	int ret = 1;
+//	for (i = 1; i <= n; i++)
+//	{
+//		ret *= i;
+//	}
+//	return ret;
+//}
+//int Fac2(int n)//递归 可以和循环语句转换
+//{
+//	if (n <= 1)
+//		return 1;
+//	else
+//		return n * Fac2(n - 1);
+//}
+//int main() //求n的阶乘
+//{
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d", &n);
+//	ret = Fac2(n);
+//	printf("%d\n", ret);
+//}
+
+
+//斐波那契数列----后一个数等于前两个数之和
+//int Fib(int n)//递归重复计算
+//{
+//	if (n <= 2)
+//		return 1;
+//	else
+//		return Fib(n - 1) + Fib(n - 2);
+//}
+int Fib(int n)//循环
 {
-	if (*str != '\0')
-		return 1 + my_strlen(str + 1);
-	else
-		return 0;
-//my_strlen("bit")
-//1+my_strlen("bi")
-//1+1+my_strlen("b")
-//1+1+1+my_strlen("")
-//1+1+1+0
-//0
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n > 2) 
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
 }
-void main()  //求字符串长度
-{
-	char arr[] = "hello";
-	//int len = strlen(arr);//求字符串长度
-	//printf("%d\n", len);
-	int len = my_strlen(arr);
-	//arr是数组，数组传参，传过去的不是整个数组，而是第一个元素的地址；
-	printf("%d\n", len);
+int main()
+{		//先写怎么用在写函数——TDD：测试驱动开发
+	int n = 0;
+	int ret = 0;
+	scanf("%d", &n);
+	ret = Fib(n);
+	printf("ret=%d\n", ret);
+	return 0;
 }
+
+//汉罗塔问题

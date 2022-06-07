@@ -1,3 +1,2 @@
 ﻿  hanshu.cpp
-D:\vs\code\Project2\hanshu.cpp(195,1): warning C4326: “main”的返回类型应为“int”而非“void”
-  Project2.vcxproj -> D:\vs\code\Project2\x64\Debug\Project2.exe
+  Project2.vcxproj -> D:\vs\code\c语言函数与递归\x64\Debug\Project2.exe
