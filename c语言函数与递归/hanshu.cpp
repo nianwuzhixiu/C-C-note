@@ -237,28 +237,53 @@
 //	else
 //		return Fib(n - 1) + Fib(n - 2);
 //}
-int Fib(int n)//循环
-{
-	int a = 1;
-	int b = 1;
-	int c = 1;
-	while (n > 2) 
-	{
-		c = a + b;
-		a = b;
-		b = c;
-		n--;
-	}
-	return c;
-}
-int main()
-{		//先写怎么用在写函数——TDD：测试驱动开发
-	int n = 0;
-	int ret = 0;
-	scanf("%d", &n);
-	ret = Fib(n);
-	printf("ret=%d\n", ret);
-	return 0;
-}
+//int Fib(int n)//循环
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 1;
+//	while (n > 2) 
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//int main()
+//{		//先写怎么用在写函数——TDD：测试驱动开发
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d", &n);
+//	ret = Fib(n);
+//	printf("ret=%d\n", ret);
+//	return 0;
+//}
 
 //汉罗塔问题
+void display(char x, char y)
+{
+	printf("%c->%c\n", x, y);
+}
+void exchange(int n, char a, char b, char c)
+{
+	if (n == 1) 
+	{
+		display(a,c);
+	}
+	else
+	{
+		exchange(n - 1, a, c, b);
+		display(a,c);
+		exchange(n - 1, b, a, c);
+	}
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	exchange(n, 'A', 'B', 'C');
+	return 0;
+
+}
