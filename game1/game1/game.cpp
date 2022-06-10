@@ -110,6 +110,7 @@ int Isfull(char board[ROW][COL], int row, int col)
 	return 1;//ย๚มห
 }
 
+
 char Iswin(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
