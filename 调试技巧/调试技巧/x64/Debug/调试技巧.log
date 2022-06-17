@@ -1,2 +1,2 @@
 ﻿  main.cpp
-  调试技巧.vcxproj -> D:\vs\code\调试技巧\调试技巧\x64\Debug\调试技巧.exe
+D:\vs\code\调试技巧\调试技巧\main.cpp(148,3): error C3892: “p”: 不能给常量赋值
